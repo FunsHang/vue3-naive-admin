@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
-import path from "path";
+import { resolve } from "path";
 
 import { wrapperEnv } from "./build/utils";
 import { createProxy } from "./build/vite/proxy";
@@ -19,7 +19,7 @@ export default defineConfig(({ command, mode }) => {
     base: VITE_PUBLIC_PATH || "/",
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "src"),
+        "@": resolve(__dirname, "src"),
       },
     },
     plugins: createVitePlugins(viteEnv, isBuild),

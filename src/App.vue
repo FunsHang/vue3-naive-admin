@@ -1,5 +1,5 @@
 <template>
-  <div>测试{{ x }}-{{ y }}}}</div>
+  <div>测试{{ x }}-{{ y }}<RouterView /></div>
 </template>
 
 <script setup lang="ts">
